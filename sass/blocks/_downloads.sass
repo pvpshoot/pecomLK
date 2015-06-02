@@ -1,0 +1,209 @@
+.downloads
+
+  article
+    margin-top: 35px
+    margin-right: -50px
+  .item
+    width: 180px
+    display: inline-block
+    margin-right: 25px
+    margin-bottom: 20px
+    vertical-align: top
+    >a
+      margin-bottom: 10px
+      display: inline-block
+      &:before
+        transition: opacity .1s ease-out
+        opacity: 0
+        position: absolute
+        content: 'S'
+        font-family: 'pek'!important
+        font-size: 25px
+        bottom: 12px
+        right: 12px
+        color: #FFFFFF
+      &:hover
+        &:before
+          opacity: 1
+    .modal-link
+      margin-bottom: 10px
+      display: inline-block
+      border: 1px solid #e3e3e6
+      position: relative
+      &:after
+        content: ''
+        display: block
+        bottom: -3px
+        position: absolute
+        left: 1px
+        right: 1px
+        border: 1px solid #e3e3e6
+        border-top: 0
+        height: 3px
+        width: 100%
+    img
+      border-radius: 0
+    p
+      font-size: 10px
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+      line-height: 1.5
+      margin-bottom: 0
+      margin-top: 0
+      a
+        text-decoration: none
+        border-bottom: 1px solid
+        +states
+          color: $brand-color
+      b
+        font-size: 12px
+    &.video
+      .fancybox-media
+        position: relative
+        display: inline-block
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          bottom: 0
+          +sq(16px)
+          background: url("/img/video.svg")
+          background-size: 100%
+          opacity: 1
+      //p
+      //  text-transform: uppercase
+      //  margin-top: 10px
+      //  a
+      //    border-bottom: 0
+  +breakpoint($xs)
+    article
+      margin-right: 0
+      white-space: nowrap
+      overflow-y: scroll
+      -webkit-overflow-scrolling-x: touch
+      .modal-link:after
+        height: 10px
+    .item
+      width: 90%
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+      a
+        width: 100%
+      img
+        width: 100%
+      p
+        b
+          font-size: 30px
+      &.video
+        height: auto
+        .fancybox-media:before
+          +sq(64px)
+
+
+.fancy-dl
+  padding-top: 110px
+  position: relative
+  background: #fff
+  width: 780px !important
+  height: 556px!important
+  &:before
+    content: ''
+    position: absolute
+    top: 80px
+    left: 0
+    right: 0
+    width: 100%
+    height: 1px
+    background: #EBEBEB
+  &:after
+    content: ''
+    position: absolute
+    bottom: 55px
+    left: 30px
+    right: 30px
+    height: 1px
+    background: #EBEBEB
+  img
+    border-radius: 0
+    width: 720px
+    height: 367px
+  .fancybox-inner
+    margin: auto
+
+  .fancybox-title
+    position: absolute
+    top: 15px
+    left: 30px!important
+    font-family: Arial
+    color:  #212029
+    font-size: 20px
+    background: #fff
+    display: block
+  .fancybox-close
+    +sq(80px)
+    line-height: 80px
+    border-left: 1px solid #EBEBEB
+    background: none!important
+    right: 0!important
+    top: 0 !important
+    content: 'x'
+    font-weight: 100
+    text-align: center
+    font-size: 40px
+    color: $brand-color
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+    transition: color .2s ease-out, box-shadow .2s ease-out
+    +states
+      text-decoration: none
+      @include box-shadow(inset 3.5px 6.1px 15px rgba(0, 10, 8, 0.07))
+      color: $second-color
+  .nav-next,
+  .nav-prev
+    font-family: Arial
+    color:  #252526
+    font-size: 10px
+    text-transform: uppercase
+    font-weight: 400
+    transition: color .2s ease-out
+    position: absolute
+    bottom: -10px
+    +states
+      color: $brand-color
+      text-decoration: none
+  .nav-next
+    right: 0
+  .nav-prev
+    left: 0
+  &.fancy-dl-video
+    &:after
+      display: none
+
+  +breakpoint($xs)
+    width: 600px !important
+    height: 770px!important
+    margin: 30px auto!important
+    padding-top: 235px !important
+    &:before
+      top: 190px
+    &:after
+      bottom: 100px
+    .fancybox-title
+      font-size: 30px
+      right: 160px!important
+    .fancybox-close
+      height: 190px
+      width: 160px
+      line-height: 190px
+      font-size: 100px
+    .fancybox-inner
+      width: 515px!important
+      height: 367px!important
+    .nav-next,
+    .nav-prev
+      font-size: 25px
+      bottom: -120px
+
+
+
+
+

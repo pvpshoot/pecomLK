@@ -1,0 +1,53 @@
+.top-menu
+  margin-bottom: 30px
+  background: $brand-color
+  ul
+    display: table
+    width: 100%
+    height: 70px
+    font-size: 0
+    margin: 0
+    padding: 0
+    li
+      display: table-cell
+      vertical-align: middle
+      margin-bottom: 0
+      border-right: 1px solid #f50041
+      &:first-child
+        border-left: 1px solid #f50041
+      &:before
+        display: none
+      a
+        font-size: 15px
+        color: #ffffff
+        height: 100%
+        padding: 13px 20px
+        display: inline-block
+        vertical-align: middle
+        i
+          padding-right: 20px
+          font-size: 30px
+          display: inline-block
+          float: left
+          margin-top: -6px
+          color: #c20a3c
+        +states
+          text-decoration: none
+
+      +states
+        transition: all .4s ease
+        background: #f2f2f2
+        border-right: 1px solid #bfbfbf
+        a
+          color: #212029
+          i
+            color: #bfbfbf
+      &.active
+        background: #f2f2f2
+        a
+          color: #212029
+          i
+            color: #bfbfbf
+
+
+

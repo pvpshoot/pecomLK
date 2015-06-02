@@ -1,0 +1,111 @@
+.directions
+  background: #ffffff url("/img/map.jpg") no-repeat
+  background-position: 50% 4px
+  transition: background-position .4s $material-animation
+  +breakpoint($xs)
+    background: url("/img/noise.png") repeat
+
+
+  .main
+
+  .content
+    padding: 0
+    background: none
+    border-radius: 0
+  .canvas-map
+    height: 500px
+    width: 889px
+    position: relative
+    svg
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: auto!important
+      height: auto!important
+    circle
+      cursor: pointer
+    .city
+      fill: #e40046
+      cursor: pointer
+      &-area
+        fill: rgba(#e40046, 0)
+        transform-origin: 50% 50%
+        pointer-events: none
+    .animated
+      animation-duration: 1s
+      animation-fill-mode: both
+    .bounceIn
+      animation-name: bounceIn
+      animation-duration: .75s
+      animation-iteration-count: infinite
+      fill: rgba(#e40046, .1)
+
+    @keyframes bounceIn
+      0%, 100%, 20%, 40%, 60%, 80%
+        transition-timing-function: cubic-bezier(0.215,.61,.355,1)
+      0%
+        opacity: 0
+        transform: scale3d(.3,.3,.3)
+      20%
+        transform: scale3d(1.1,1.1,1.1)
+      40%
+        transform: scale3d(.9,.9,.9)
+      60%
+        opacity: 1
+        transform: scale3d(1.03,1.03,1.03)
+      80%
+        transform: scale3d(.97,.97,.97)
+      100%
+        opacity: 1
+        transform: scale3d(1,1,1)
+
+
+
+  .wrapper
+    +breakpoint($xs)
+      background: #fff
+      padding: 60px 40px
+      border-radius: 11px
+      .marked
+        li
+          font-size: 26px
+  .faq
+    padding-top: 50px
+    li
+      margin-left: 65px
+      &:first-child
+        margin-left: 0
+      a
+        text-decoration: none
+        +states
+          b
+            color: $brand-color
+            transition: color .2s $animation
+          .number
+            color: $brand-color
+            transition: color .2s $animation
+    +breakpoint($xs)
+      li
+        margin-left: 25px
+
+
+  //g
+  //  //clip-path: rect(10px, 20px, 30px, 40px)
+  //  //clip: rect(10px, 20px, 30px, 40px)
+  //
+  //path
+  //  clip-path: circle(60px at center)
+
+  //path
+  //  stroke-dasharray: 10
+  //  stroke-dashoffset: 1000
+  //  animation: dash 5s linear forwards
+  //
+  //
+  //@keyframes dash
+  //  to
+  //    stroke-dashoffset: 0
+
+

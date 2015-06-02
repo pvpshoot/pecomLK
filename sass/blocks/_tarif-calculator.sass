@@ -1,0 +1,83 @@
+.tarif-calculator
+  padding: 35px 0
+  border-top: 1px solid #ebebeb
+  border-bottom: 1px solid #ebebeb
+  h3
+    margin-top: 0
+  .col-3
+    width: 33%
+    display: inline-block
+    padding-right: 20px
+    padding-left: 20px
+    vertical-align: top
+    &.f-ch
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+
+  label
+    margin-top: 0
+
+  .form-group
+    margin-left: 0
+    margin-right: 0
+  .value
+    margin-top: 0
+    padding-left: 20px
+    &-key
+      position: relative
+      display: inline-block
+      color: #250E62
+      font-size: 40px
+      line-height: 40px
+      font-weight: 700
+      small
+        font-size: 12px
+      &:before
+        position: absolute
+        top: -10px
+        left: -20px
+        font-family: pek
+        display: block
+        color: #9F9EA8
+        font-size: 12px
+    &.price
+      .value-key
+        &:before
+          content: 'r'
+    &.time
+      .value-key
+        &:before
+          content: 'h'
+    &.calendar
+      .value-key
+        &:before
+          content: 'b'
+    p
+      margin-top: 0
+      margin-bottom: 0
+      color: #212029
+      font-size: 14px
+  .filter-tariffs-result
+    padding-top: 10px
+  +breakpoint($xs)
+    h3
+      small
+        display: block
+    .col-3
+      width: 100%
+      padding-left: 0
+      padding-right: 0
+      margin-bottom: 50px
+      label
+        margin-bottom: 20px
+    .value
+      padding-left: 30px
+      &-key
+        font-size: 70px
+        &:before
+          font-size: 20px
+          top: -20px
+          left: -30px
+
+

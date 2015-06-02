@@ -1,0 +1,55 @@
+.about-page
+  .partners
+    border-radius: 6px
+    background: #fff
+    font-size: 0
+    >span
+      height: 280px
+      overflow: hidden
+      display: inline-block
+      width: 50%
+      height: 280px
+      border: 1px solid #ebebeb
+      border-top: 0
+      border-bottom: 1px solid #ebebeb
+      padding: 0
+      margin: 0
+      vertical-align: top
+      transition: box-shadow .2s $animation, color .2s $animation
+
+    .logo
+      display: block
+      margin: 0
+      text-align: center
+      height: 220px
+      line-height: 220px
+      img
+        width: 100%
+        display: inline-block
+        max-width: 200px
+    .name
+      text-align: center
+      display: block
+      color: #404040
+      font-family: "Arial"
+      font-size: 11px
+      line-height: 16px
+      font-weight: 400
+      text-transform: uppercase
+  +breakpoint($xs)
+    .partners
+      >span
+        width: 100%
+        height: 600px
+        +states
+          @include box-shadow(inset 0 0 30px rgba(0, 10, 8, 0.07))
+      .logo
+        height: 430px
+        line-height: 430px
+        img
+          max-width: 300px
+      .name
+        font-size: 30px
+        line-height: 1.5
+
+

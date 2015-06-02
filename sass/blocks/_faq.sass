@@ -1,0 +1,68 @@
+.section-FAQ
+  margin-top: 40px
+  h2
+    text-align: center
+    text-transform: uppercase
+    color: #26323c
+    font-size: 14px
+    margin-top: 0
+    margin-bottom: 30px
+    a
+      color: #e40046
+      text-decoration: underline
+      +states
+        text-decoration: none
+  ul
+    margin: 0
+    margin-bottom: 50px
+    padding: 0
+  li
+    width: 200px
+    display: inline-block
+    line-height: 100%
+    margin-bottom: 0
+    vertical-align: top
+    margin-left: 30px
+
+    &:first-child
+      margin-left: 0
+    &:before
+      display: none
+    .number
+      color:  rgba(33, 32, 41, 0.4)
+      font-size: 24px
+      padding-bottom: 15px
+      border-bottom: 4px solid #e40046
+    p
+      padding-top: 20px
+      font-size: 17px
+      font-weight: 500
+      line-height: 20px
+      b
+        display: block
+        position: relative
+        &.plus
+          &:before
+            content: '>'
+            display: inline-block
+            position: absolute
+            left: -15px
+            color: #bdbcc7
+  +breakpoint($xs)
+    h2
+      font-size: 40px
+      text-align: left
+    ul
+      overflow-x: scroll
+      white-space: nowrap
+      padding-bottom: 10px
+      li
+        width: 250px
+      .number
+        font-size: 37px
+        line-height: 150%
+      p
+        font-size: 22px
+        line-height: 28px
+        padding-top: 0
+        white-space: normal

@@ -1,0 +1,98 @@
+@charset "utf-8"
+@import "compass"
+//@import "compass/utilities"
+//@import "icons/*.png"
+//@include all-icons-sprites
+//$icons-layout: horizontal
+
+@import "breakpoint"
+@import "mixins"
+
+
+
+@import "elements/variables"
+@import "elements/buttons"
+@import "elements/fonts"
+@import "elements/animation"
+@import "elements/material"
+@import "elements/datepick"
+@import "elements/modals"
+@import "elements/redalert"
+
+
+@import "blocks/header"
+@import "blocks/top-menu"
+@import "blocks/main"
+
+//оно же 2 строка меню
+//@import "blocks/left-menu"
+//
+
+@import "blocks/inner-style"
+@import "blocks/footer"
+
+
+//Малые блоки
+//@import "blocks/main-slider"
+//@import "blocks/right-tools"
+//@import "blocks/transport-categories"
+//@import "blocks/faq"
+//@import "blocks/news"
+//@import "blocks/about"
+//@import "blocks/tarif-calculator"
+//@import "blocks/tabs"
+//@import "blocks/modal"
+//@import "blocks/directions"
+//@import "elements/tooltip"
+//@import "blocks/404"
+//@import "blocks/about-page"
+//@import "blocks/partners"
+//@import "blocks/press-news"
+//@import "blocks/downloads"
+//@import "blocks/news-page"
+//@import "blocks/serv"
+//@import "blocks/contacts"
+//@import "blocks/feedback"
+//@import "blocks/online-store"
+//@import "blocks/send-comment"
+//@import "blocks/zayavka-transport"
+//@import "blocks/site-map"
+//@import "blocks/calc"
+//@import "blocks/status-result"
+
+
+
+
+
+
+
+body
+  -webkit-font-smoothing: antialiased
+  line-height: 150%
+  background: url("/img/noise.png") repeat
+  min-width: 1170px
+  font-size: 13px
+  +breakpoint($xs)
+    min-width: 640px
+.container
+  width: 1170px
+  +breakpoint($xs)
+    width: 100%
+
+html
+  display: block !important
+.tablet
+  *
+    transition: none!important
+
+//строка позора
+
+@import "print"
+@import "shame"
+
+
+
+
+
+
+

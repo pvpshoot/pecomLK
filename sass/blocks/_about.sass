@@ -1,0 +1,99 @@
+.about
+  @extend .news
+  position: relative
+  p
+    margin-top: 0
+    line-height: 24px
+  .btns-group
+    position: absolute
+    bottom: 0
+    width: 805px
+    left: 0
+    right: 0
+    border-top: 1px solid #cacac8
+    border-radius: 0
+    vertical-align: top
+    @extend .transport-categories
+    a
+      &:after
+        display: none
+      .inline
+        padding-top: 20px
+    .ico-wrapper
+      height: 85px
+      display: block
+      //margin-bottom: -20px
+      img
+        width: auto
+      &:before
+        content: ''
+        height: 100%
+        display: inline-block
+        vertical-align: bottom
+
+      .icon
+        vertical-align: bottom
+        display: inline-block
+        //line-height: 180px
+
+    a
+      vertical-align: top
+      .text
+        width: 100%
+        padding-top: 5px
+        text-align: left
+      .icon-1
+        font-size: 44*1.5 +0px
+      .icon-2
+        font-size: 54*1.5 +0px
+      .icon-3
+        font-size: 49*1.5 +0px
+      .icon-4
+        font-size: 52*1.5 +0px
+  +breakpoint($xs)
+    padding-bottom: 0
+    .plate-wrapper
+      height: auto !important
+    .btns-group
+      display: flex
+      flex-wrap: wrap
+      position: static
+      margin-left: -40px
+      margin-right: -40px
+      width: 610px
+      a
+        width: 100%
+        border-radius: 0
+        border-bottom: 1px solid rgb(202, 202, 200) !important
+        height: 300px
+        float: none
+        margin: 0
+
+        &:nth-child(3)
+          border-left: 0
+        &:before
+          display: none
+        .text
+          padding: 0
+          font-size: 25px
+          color: #212029
+          text-align: left !important
+        .ico-wrapper
+          height: auto
+          display: block
+          text-align: center
+          margin-bottom: 0
+          margin-left: 100px
+          padding-right: 50px
+        .icon
+          padding: 0
+          margin: 0
+          float: none
+      .inline
+        display: flex
+        align-items: center
+        height: 100%
+    p
+      line-height: 150%
+
+

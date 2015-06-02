@@ -1,0 +1,135 @@
+.section-TC
+  margin-top: 20px
+  .inner-slider
+    img
+      height: 180px
+
+.transport-categories
+  border-radius: 6px
+  overflow: hidden
+  display: table
+  width: 100%
+  table-layout: fixed
+  border-collapse: separate
+  //margin-top: 35px
+  .plate-wrapper
+    display: table-cell
+    float: none
+    width: 1%
+    height: 180px
+    background: #fff
+    vertical-align: middle
+    position: relative
+    +breakpoint($xs)
+      display: block
+      width: 100%
+      margin-bottom: 30px
+      border-radius: 12px
+    &:first-child
+      a
+        border-left: 0
+
+    //z-index: 1
+  a
+    display: block
+    height: 100%
+
+    //line-height: 180px
+    text-align: center
+    vertical-align: middle
+    position: relative
+    border-left: 1px solid #cacac8
+    z-index: 1
+    &:after
+      content: ''
+      height: 100%
+      display: inline-block
+      vertical-align: middle
+    &:before
+      transition: box-shadow .4s $material-animation
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      right: 0
+      bottom: 0
+      top: 0
+      display: block
+      text-decoration: none
+      //transform: scale(1.02)
+      //border-left: 1px solid #camelCase
+      z-index: 2
+    +states
+      text-decoration: none
+      //border-left: 0
+      border-right: 0
+      z-index: 4
+      &:before
+        border: 6px solid #fff
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        display: block
+        text-decoration: none
+        transform: scale(1.02)
+
+        +card(3)
+        z-index: 4
+      .ico-wrapper
+        img
+          transition: transform .4s $animation
+          transform: scale(1.2)
+
+    
+    .icon
+      color: #250e62
+      font-size: 80px
+      line-height: initial
+      transition: all ease-in-out .2s
+    .text
+      color: #212029
+      font-weight: 700
+      font-size: 13px
+      display: inline-block
+      width: 70px
+      text-align: center
+      transition: all ease-in-out .2s
+      line-height: 1.2
+  +breakpoint($xs)
+    display: block
+    a
+      display: block
+      width: 100%
+      margin-bottom: 30px
+      height: 230px
+      text-align: left
+      border: none
+      &:before
+        content: " "
+        display: inline-block
+        height: 100%
+        width: 1%
+        vertical-align: middle
+      .icon
+        float: left
+        margin-left: 75px
+        font-size: 120px
+        //vertical-align: middle
+
+        margin-top: 0
+      .text
+        text-align: left
+        font-size: 45px
+        line-height: 150%
+        padding-left: 80px
+        vertical-align: middle
+        //white-space: nowrap
+
+
+
+  
+  

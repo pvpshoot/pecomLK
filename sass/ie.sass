@@ -1,0 +1,64 @@
+/*
+  Welcome to Compass. Use this file to write IE specific override styles.
+  Import this file using the following HTML or equivalent:
+  <!--[if IE]>
+    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+
+
+.sub-menu
+  height: 500px!important
+
+.btn,.form-control
+  vertical-align: middle
+  display: inline-block
+
+.ie_fix_height
+  height: 38px
+  .btn,.form-control
+    display: inline-block
+    vertical-align: middle
+    //line-height: 38px
+
+.transport-categories
+  a
+    &:before
+      content: ''
+      width: 1px
+      height: 100%
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+      background: #CACAC8
+    &:first-child
+      &:before
+        display: none
+
+.calculate
+  padding-top: 5px
+  padding-bottom: 5px
+  .country-switcher
+    bottom: 210px
+  h3
+    padding-bottom: 50px
+  .form-group
+    display: block
+    &:after
+      clear: both
+    >label
+      width: 35%
+      display: inline-block
+    >div
+      width: 65%
+      display: inline-block
+  .form-control
+    //line-height: 38px!important
+
+    //padding-top: 0
+    //padding-bottom: 0
+    border: none!important
+    vertical-align: middle
+
+.circle
+  display: none

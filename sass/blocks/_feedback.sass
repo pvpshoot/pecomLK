@@ -1,0 +1,32 @@
+.content.feedback
+  padding-top: 40px
+.feedback
+  .capcha
+    //padding-right: 0
+    padding-left: 0
+    img
+      height: 100%
+      width: 100%
+  .helper-text
+    margin-bottom: -400px
+    margin-top: -10px
+    p
+      font-size: 12px
+  +breakpoint($xs)
+    .helper-text
+      margin-bottom: 30px
+      margin-top: 0
+
+      p
+        margin-top: 0
+        font-size: 30px
+    label
+      line-height: 1
+      &.required:after
+        content: '*'
+        color: $brand-color
+    .capcha
+      width: 260px
+      height: 116px
+      margin-bottom: 20px
+      padding-left: 15px

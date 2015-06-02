@@ -1,0 +1,109 @@
+//Модал
+.modal
+  
+  .modal-header
+    height: 80px
+    overflow: hidden
+    white-space: nowrap
+    padding: 0
+    position: relative
+    .modal-title
+      color: #000
+      font-size: 26px
+      font-weight: 700
+      text-transform: uppercase
+      text-align: center
+      line-height: 80px
+    .close
+      opacity: 1
+      display: inline-block
+      position: absolute
+      top: 0
+      right: 0
+      font-size: 44px
+      +sq(80px)
+      line-height: 80px
+      color: rgba($brand-color, .8)
+      border-left: 1px solid rgb(229, 229, 229)
+      &:hover,
+      &:focus,
+      &:active
+        outline: none
+        color: rgba($brand-color, 1)
+  .modal-body
+    .table-transparent
+      td
+        color: #575759
+        font-family: "Arial"
+        font-size: 12px
+        font-weight: 400
+        vertical-align: top
+        &+td
+          font-weight: 700
+    .filial
+      td
+        font-size: 11px
+    p
+      color: #575759
+      font-family: "Arial"
+      font-size: 11px
+      font-weight: 400
+  +breakpoint($xs)
+    .modal-header
+      height: auto
+      .modal-title
+        white-space: normal
+        font-size: 40px
+        line-height: 150%
+        padding-right: 80px
+      .close
+        height: 100%
+        margin-top: 0
+    .modal-body
+      .table-transparent
+        td
+          display: block
+          font-size: 35px
+          line-height: 150%
+      .filial
+        td
+          font-size: 35px
+      h5
+        font-size: 45px
+        margin-top: 30px
+        margin-bottom: 20px
+      p
+        font-size: 30px
+      .btn
+        margin-top: 20px
+
+.subscription-modal
+  .form-group
+    margin: 0
+    margin-bottom: 10px
+    height: 38px
+    line-height: 38px
+    span
+      color: #575759
+      font-size: 18px
+      font-weight: 400
+      vertical-align: middle
+  .label-wrapper
+    height: 38px
+    line-height: 38px
+  label
+    //height: 38px
+    line-height: 14px
+    display: inline-block
+    vertical-align: middle
+    margin: 0
+  +breakpoint($xs)
+    .label-wrapper
+      height: auto
+    label
+      font-size: 30px
+      margin-bottom: 0
+      line-height: 45px
+    .form-group
+      margin-bottom: 30px
+      height: auto

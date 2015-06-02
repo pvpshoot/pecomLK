@@ -1,0 +1,78 @@
+.about-page
+  .text-img
+    float: right
+    width: 400px
+    padding-left: 30px
+    margin-top: 15px
+    margin-bottom: 10px
+  .heding
+    text-align: center
+  .services
+    display: table
+    width: 100%
+    table-layout: fixed
+    border-collapse: separate
+    margin-bottom: 20px
+    .item
+      display: table-cell
+      float: none
+      width: 1%
+      text-align: center
+      a
+        +states
+          text-decoration: none
+          color: $brand-color
+      i
+        vertical-align: middle
+        display: block
+        +sq(48px)
+        border: 2px solid #e6e6e6
+        border-radius: 50%
+        margin: 20px auto
+        color: $second-color
+        font-size: 24px
+        line-height: 48px
+        &:before
+          vertical-align: middle
+
+  .fact
+    background-position: 50% 50%
+    background-repeat: no-repeat!important
+    background-size: cover !important
+    height: auto
+    margin: 0 -40px
+    p
+      color: #FFF
+      font-size: 26px
+      font-weight: 400
+      text-align: justify
+      padding: 45px 60px 30px
+
+  +breakpoint($xs)
+    .text-img
+      float: none
+      width: 100%
+      padding-left: 0
+    .heding
+      text-align: left
+    .fact
+      height: auto
+      font-size: 44px
+      text-align: left
+    .services
+      display: block
+      margin-bottom: 100px
+      .item
+        display: block
+        width: 100%
+        font-size: 32px
+        font-weight: 700
+        line-height: 1
+        margin-top: 60px
+
+        i
+          border: none
+          font-size: 160px
+          line-height: 1
+          height: auto
+          width: auto

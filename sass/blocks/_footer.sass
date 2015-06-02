@@ -1,0 +1,184 @@
+.footer
+  margin-top: 60px
+  background: #FFFFFF
+  padding: 60px 40px
+  +breakpoint($md)
+    padding: 30px 0
+    padding-bottom: 0
+  .footer-light-menu
+    margin-bottom: 40px
+    padding: 0
+    margin-top: 5px
+    +breakpoint($md)
+      margin-bottom: 0
+    .menu-item
+      &:before
+        display: none
+      margin-bottom: 20px
+      +breakpoint($md)
+        display: inline-block
+        margin-right: 20px
+      &.active
+        .menu-link
+          text-decoration: none
+          color: #808080
+    .menu-link
+      display: inline-block
+      color: #212029
+      font-size: 28px
+      font-weight: 700
+      &
+      +states
+        text-decoration: none
+        color: #808080
+      +breakpoint($md)
+        font-size: 13px
+        font-weight: 500
+  .tel
+    font-size: 14px
+    color: #1b1a24
+    text-decoration: none
+    display: inline-block
+    margin-top: 5px
+    &:hover,
+    &:focus
+      text-decoration: none
+
+  .btn-group
+    +breakpoint($md)
+      margin-top: -7px
+
+
+
+  .search
+    padding: 35px 0 75px
+    +breakpoint($md)
+      padding: 0
+    .form-control
+      height: 65px
+      background-color: #f2f2f2
+      border: 0px solid white
+      border-right: 0
+      border-radius: 12px 0 0 12px
+      color: #808080
+      font-family: "Arial"
+      font-size: 25px
+      font-style: italic
+      font-weight: 100
+      +placeholder(#808080)
+      box-shadow: none
+      +breakpoint($md)
+        height: 30px
+        font-size: 11px
+    .btn
+      background-color: #f2f2f2
+      color: #808080
+      border: 0px solid white
+      border-left: 0
+      border-radius: 0 12px 12px 0
+      padding-top: 18px
+      padding-bottom: 12px
+      padding-left: 20px
+      padding-right: 20px
+      position: relative
+      +breakpoint($md)
+        height: 30px
+        font-size: 11px
+        padding: 0 10px
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        width: 3px
+        height: 35px
+        background: #808080
+        +breakpoint($md)
+          width: 2px
+          height: 15px
+          font-size: 11px
+      .icon
+        font-size: 21px
+        margin-top: 5px
+        +breakpoint($md)
+          font-size: 11px
+  .footer-main-menu
+    padding: 0
+    margin-top: 60px
+    margin-left: -55px
+    margin-right: -55px
+    margin-bottom: 40px
+    .menu-item
+      border-bottom: 2px solid #e6e6e6
+      margin-bottom: 0
+      //border-bottom: 0
+      &:first-child
+        border-top: 2px solid #e6e6e6
+      &.active
+        background: #f2f2f2
+      &:before
+        display: none
+      .menu-link
+
+        color: #212029
+        font-size: 35px
+        font-weight: 400
+        text-transform: uppercase
+        display: block
+        line-height: 90px
+        padding-left: 55px
+  .copy
+    font-family: arial, sans-serif
+    font-size: 22px
+    color: #b3b2bf
+    line-height: 150%
+    .copy-link
+      color: #b3b2bf
+    +breakpoint($md)
+      font-size: 12px
+      font-weight: 500
+      padding-top: 15px
+      span
+        float: left
+
+      .copy-link-second
+        float: right
+        text-align: right
+  .footer-bot
+    display: none
+    +breakpoint($md)
+      width: 100%
+      height: 1px
+      border-top: 1px solid #e6e6e6
+      display: block
+  .footer-second-menu
+    padding-bottom: 20px
+  .footer-sub-menu
+
+    li
+      margin-bottom: 0
+      &:before
+        display: none
+
+    a
+      font-size: 11px
+      color: #888
+      font-weight: 500
+      &:hover
+        color: #4a4a4a
+        text-decoration: none
+      &.active
+        color: #4A4A4A
+        text-decoration: none
+  .heading
+    margin-top: 30px
+    margin-bottom: 15px
+    font-size: 14px
+    font-weight: 500
+    color: #212029
+    text-transform: uppercase
+
+
+      
+      
+
+

@@ -1,0 +1,147 @@
+.serv
+  overflow: hidden
+
+  h2
+    font-weight: normal
+  article
+    font-size: 0
+    margin-left: -41px
+    margin-right: -41px
+    padding-top: 10px
+    padding-bottom: 10px
+    transform: translate3d(0,0,0)
+    .item
+      width: 33.33333%
+      height: 190px
+      display: inline-block
+      //border: 1px solid #ebebeb
+      //border-left: 0
+
+      background: #fff
+      text-align: center
+      vertical-align: middle
+      position: relative
+      z-index: 1
+      &:before
+        transition: box-shadow .4s $material-animation
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        display: block
+        text-decoration: none
+        //transform: scale(1.02)
+        border: 1px solid #cacac8
+        border-left: 1px solid transparent
+        z-index: 2
+      &:nth-child(n+4)
+        border-top: 0
+      .ico-wrapper
+        display: block
+        height: 110px
+        text-align: center
+        vertical-align: bottom
+        margin-bottom: 10px
+        &:before
+          content: ''
+          display: inline-block
+          height: 100%
+          width: 0
+        img
+          width: auto
+          border-radius: 0
+          margin-bottom: 40px
+        .icon
+          font-size: 80px
+          color: $second-color
+          &:before
+            vertical-align: bottom
+      .text
+        color: #212029
+        font-size: 13px
+        font-weight: 700
+        display: block
+        text-align: center
+        padding-top: 10px
+      +states
+        text-decoration: none
+        border: 1px solid transparent
+        z-index: 2
+        &:before
+          border: 6px solid #fff
+          content: ''
+          position: absolute
+          left: 0
+          right: 0
+          bottom: 0
+          top: 0
+          display: block
+          text-decoration: none
+          transform: scale(1.02)
+
+          +card(3)
+          z-index: 4
+        .ico-wrapper
+          img
+            transition: transform .4s $animation
+            transform: scale(1.2)
+  +breakpoint($xs)
+    background: none
+    padding: 0
+    h2
+      margin-top: 0
+      font-size: 40px
+    article
+      margin-left: 0
+      margin-right: 0
+      padding-top: 0
+      padding-bottom: 0
+      .item
+        width: 100%
+        margin-bottom: 40px
+        border: 1px solid #ebebeb
+        border-radius: 12px
+        height: 230px
+        line-height: 230px
+        position: relative
+        text-align: left
+        .ico-wrapper
+          width: 250px
+          padding-top: 25px
+          img
+            transform: scale(1.3)
+        .icon-wrapper
+          height: 100%
+          width: 250px
+          position: absolute
+          .icon
+            position: absolute
+            top: 50%
+            left: 75px
+            transform: translateY(-50%)
+            vertical-align: middle
+            font-size: 140px
+            &:before
+              vertical-align: middle
+        .text
+          padding-left: 250px
+          position: absolute
+          line-height: 1.5
+          top: 50%
+          transform: translateY(-50%)
+          font-size: 42px
+          text-align: left
+
+
+
+
+
+  &+.serv
+    margin-top: 20px
+    background: #fff
+    padding-left: 60px
+    padding-right: 60px
+    p
+      line-height: 1.5

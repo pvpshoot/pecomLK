@@ -1,0 +1,78 @@
+.main-slider
+  position: relative
+  height: 500px
+  overflow-y: hidden
+
+  .item
+    padding: 60px 60px 40px 60px
+    height: 500px
+    position: relative
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: url("/img/bg-index-owerlay-slider.png")
+      border-radius: 6px
+  .bg
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    z-index: -1
+    border-radius: 6px
+    height: 500px
+  h2
+    color: #fff
+    font-size: 60px
+    font-weight: 400
+    text-transform: uppercase
+    width: 356px
+    display: block
+    line-height: 100%
+    margin-bottom: 0
+    margin-top: 0
+    position: relative
+    z-index: 10
+  p
+    color: #FFF
+    font-size: 18px
+    font-weight: 700
+    width: 356px
+    line-height: 100%
+    margin-bottom: 10px
+    position: relative
+    z-index: 10
+  .bnts
+    position: relative
+    z-index: 10
+  .nav-btns
+    position: absolute
+    bottom: 60px
+    left: 60px
+    z-index: 10
+    .btn
+      width: 120px
+      height: 65px
+      text-align: left
+      white-space: normal
+      display: inline-flex
+      align-items: center
+      color: white
+      &.active
+        background: white
+        color: #212029
+        box-shadow: none
+      &:hover
+        background: white
+        color: #212029
+        box-shadow: none
+      //&:active
+      //  color: white
+      //  background: transparent
+  .owl-controls
+    display: none

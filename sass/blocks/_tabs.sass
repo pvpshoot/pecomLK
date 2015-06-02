@@ -1,0 +1,176 @@
+.changeNumberOf
+  .tab-head
+    padding: 0
+    text-align: center
+    position: relative
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      height: 1px
+      width: 100%
+      background-color: #EBEBEB
+      top: 50%
+
+    li
+      margin-bottom: 0
+      margin-left: -5px
+      &:before
+        display: none
+        padding: 0
+      &:first-child
+        a
+          border-radius: 3px 0 0 3px
+      &:last-child
+        a
+          border-radius: 0 3px 3px 0
+      a
+        display: inline-block
+        text-decoration: none!important
+        font-family: arial, sans-serif
+        font-size: 11px
+        padding-top: 0
+        padding-bottom: 0
+        border: 1px solid #EBEBEB
+        +states
+          text-decoration: none
+        &.active
+          background-color: #EBEBEB
+          color: #808080
+          box-shadow: none
+  +breakpoint($xs)
+    .tab-head
+      display: table
+      width: 100%
+      table-layout: fixed
+      border-collapse: separate
+      &:before
+        display: none
+      li
+        display: table-cell
+        float: none
+        width: 1%
+        a
+          width: 100%
+          font-size: 27px
+          padding: 30px 0
+
+
+  .tab-body
+    padding-top: 40px
+    padding-bottom: 40px
+    position: relative
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      height: 1px
+      background-color: #EBEBEB
+      bottom: 0
+      left: -40px
+      right: -40px
+      
+    .form-group
+      position: relative
+      margin: 0
+      margin-bottom: 10px
+      animation: addInput .2s
+      &.remInput
+        animation: delInput .2s
+      .add,
+      .del
+        position: absolute
+        top: 20px
+        margin-top: -9px
+        right: 10px
+        +sq(18px)
+        border: 1px solid #f93f72
+        border-radius: 50%
+        color: #f93f72
+        text-align: center
+        display: inline-block
+        line-height: 18px
+        white-space: nowrap
+        text-decoration: none
+        font-size: 18px
+    p
+      color: #404040
+      font-family: "Arial"
+      font-size: 11px
+      margin-top: 0
+      margin-bottom: 0
+  +breakpoint($xs)
+    .tab-body
+      &:after
+        width: 100%
+        left: 0
+      label
+        font-size: 30px
+        margin-bottom: 20px
+      .form-group
+        margin-bottom: 30px
+        .del,.add
+          +sq(40px)
+          line-height: 40px
+          margin-top: -20px
+          font-size: 40px
+
+      p
+        margin-top: 20px
+        font-size: 25px
+
+
+
+.call-back
+  .tabs-body
+    .form-group
+      margin: 0
+      margin-bottom: 10px
+    .label-wrapper
+      height: 38px
+      line-height: 38px
+    .helper-text
+      line-height: 1.5
+      font-size: 15px
+      padding: 0
+      margin: 0
+      margin-bottom: -100px
+
+
+    label
+      //height: 38px
+      line-height: 14px
+      display: inline-block
+      vertical-align: middle
+      margin: 0
+      &.required
+        &:after
+          content: '*'
+          color: $brand-color
+  +breakpoint($xs)
+    .tabs
+      margin-top: 30px
+      margin-bottom: 30px
+      .tabs-heading
+        display: block
+        .tabs-heading-link
+          display: inline-block
+          font-size: 32px
+    .tabs-body
+      .label-wrapper
+        height: auto
+      label
+        font-size: 30px
+        margin-bottom: 0px
+        line-height: 45px
+      .form-group
+        margin-bottom: 30px
+      .helper-text
+        margin-bottom: 0
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+.news
+  border-radius: 6px
+  background: #FFFFFF
+  padding: 40px 40px
+  height: 680px
+  overflow: hidden
+  h2
+    margin-top: 0
+    margin-bottom: 10px
+    font-size: 30px
+    font-weight: 400
+  article
+    margin-bottom: 10px
+    header
+      font-size: 13px
+      font-weight: 700
+      margin-bottom: 0
+      a
+        color: inherit
+        +states
+          color: $brand-color
+          text-decoration: none
+    p
+      font-size: 13px
+      margin-bottom: 0
+    .time
+      font-size: 9px
+      color: #b4b2c0
+      span
+        text-transform: uppercase
+        &:before
+          content: '|'
+          padding-right: 5px
+          padding-left: 5px
+        a
+          color: inherit
+          +states
+            color: $brand-color
+            text-decoration: none
+  .all-news
+    color: inherit
+    +states
+      color: $brand-color
+      text-decoration: none
+  +breakpoint($xs)
+    margin-bottom: 30px
+    border-radius: 12px
+    height: auto
+    h2
+      font-size: 50px
+    article
+      margin-bottom: 50px
+      header
+        font-size: 30px
+        line-height: 1.5
+      p
+        font-size: 30px
+        margin-top: 20px
+      .time
+        font-size: 25px
+        display: inline-block
+        margin-top: 20px

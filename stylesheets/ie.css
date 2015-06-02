@@ -1,0 +1,83 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* line 9, ../sass/ie.sass */
+.sub-menu {
+  height: 500px !important;
+}
+
+/* line 12, ../sass/ie.sass */
+.btn, .form-control {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 16, ../sass/ie.sass */
+.ie_fix_height {
+  height: 38px;
+}
+/* line 18, ../sass/ie.sass */
+.ie_fix_height .btn, .ie_fix_height .form-control {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 25, ../sass/ie.sass */
+.transport-categories a:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #CACAC8;
+}
+/* line 35, ../sass/ie.sass */
+.transport-categories a:first-child:before {
+  display: none;
+}
+
+/* line 38, ../sass/ie.sass */
+.calculate {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* line 41, ../sass/ie.sass */
+.calculate .country-switcher {
+  bottom: 210px;
+}
+/* line 43, ../sass/ie.sass */
+.calculate h3 {
+  padding-bottom: 50px;
+}
+/* line 45, ../sass/ie.sass */
+.calculate .form-group {
+  display: block;
+}
+/* line 47, ../sass/ie.sass */
+.calculate .form-group:after {
+  clear: both;
+}
+/* line 49, ../sass/ie.sass */
+.calculate .form-group > label {
+  width: 35%;
+  display: inline-block;
+}
+/* line 52, ../sass/ie.sass */
+.calculate .form-group > div {
+  width: 65%;
+  display: inline-block;
+}
+/* line 55, ../sass/ie.sass */
+.calculate .form-control {
+  border: none !important;
+  vertical-align: middle;
+}
+
+/* line 63, ../sass/ie.sass */
+.circle {
+  display: none;
+}

@@ -1,0 +1,256 @@
+.calculate
+  padding: 20px 30px
+  background: #fff
+  border-radius: 6px
+  height: 275px
+  position: relative
+  overflow: hidden
+  +breakpoint($xs)
+    padding-top: 60px
+    padding-bottom: 60px
+    height: auto
+    border: 1px solid #e6e6e5
+    margin-bottom: 30px
+
+  h3
+    margin: 0
+    color: #250e62
+    font-size: 20px
+    font-weight: 700
+    padding-bottom: 70px
+    line-height: 20px
+    text-transform: none
+    padding-left: 15px
+    +breakpoint($xs)
+      font-size: 40px
+      padding-bottom: 30px
+  .country-switcher
+    position: absolute
+    bottom: 185px
+    +breakpoint($xs)
+      position: static
+      padding: 0 15px
+  .country
+    display: inline-block
+    +breakpoint($xs)
+      display: block
+      //margin-bottom: 50px
+    span
+      color: #212029
+      font-size: 12px
+      text-decoration: none
+      border-bottom: 1px dashed #9f9ea8
+      line-height: 12px
+      font-weight: 700
+      +breakpoint($xs)
+        font-size: 35px
+        line-height: 150%
+
+    a
+      +states
+        text-decoration: none
+        color: lighten(#212029, 10%)
+        span
+          border-bottom: 0
+
+    &.country-from
+      position: relative
+      &:after
+        padding-left: 15px
+        padding-right: 15px
+        content: '\2192'
+        color:  rgba(159, 158, 168, 0.35)
+        +breakpoint($xs)
+          transform: rotate(90deg)
+          font-size: 40px
+          font-weight: bold
+          display: block
+          width: 49px
+          height: 52px
+          padding-left: 10px
+          //margin-bottom: 30px
+          //background: $arr-down
+  .form-weight,
+  .form-capacity
+    font-weight: bold
+  .gabarits
+    text-decoration: none
+    color: #bfbfbf
+    &.active
+      color: $brand-color
+  .info
+    +sq(10px)
+    color: #fff
+    background: #bfbfbf
+    display: inline-block
+    text-align: center
+    line-height: 10px
+    border-radius: 50%
+    margin-right: -15px
+    margin-left: 5px
+    cursor: pointer
+    +breakpoint($xs)
+      +sq(30px)
+      line-height: 30px
+      font-size: 30px
+
+
+
+  .disable-padding
+    //padding-right: 15px
+    //padding-left: 15px
+  form.row
+    padding-left: 15px
+
+  label
+    font-weight: 700
+    font-size: 12px
+    color: #212029
+    line-height: 12px
+    +breakpoint($xs)
+      font-size: 25px
+      margin-top: 30px
+      line-height: 1.2
+  .form-group
+    margin-bottom: 10px
+    overflow: hidden
+    +breakpoint($xs)
+      //margin-left: -15px
+      //margin-right: -15px
+  .form-control
+    width: 100px
+    +breakpoint($xs)
+      width: 320px
+
+
+
+  .special-inputs
+    text-align: left
+    position: relative
+
+    &:before
+      position: absolute
+      content: 'x'
+      font-family: 'pek'
+      font-size: 8px
+      color: #d2d2d6
+      left: 50px
+      top: 10px
+      +breakpoint($xs)
+        left: 33%
+        top: 30px
+        font-size: 12px
+    &:after
+      position: absolute
+      content: 'x'
+      font-family: 'pek'
+      font-size: 8px
+      color: #d2d2d6
+      left: 85px
+      top: 10px
+      +breakpoint($xs)
+        left: 66%
+        font-size: 12px
+        top: 30px
+
+    .form-control
+      text-align: center
+      width: 40px
+      display: inline-block
+      padding: 0
+      margin-right: -4px
+      font-weight: 700
+      transition: none!important
+      +breakpoint($xs)
+        width: 33%
+      &:focus,
+      &:active
+        border: 0
+  .parsley-errors-list
+    display: none
+  button
+    +breakpoint($xs)
+      margin-top: 30px
+  +breakpoint($xs)
+    .gabarits-width
+      display: inline-block
+      margin-bottom: 20px
+      margin-left: 20px
+
+
+.status-check
+  @extend .calculate
+  height: 115px
+  padding-top: 20px
+  padding-bottom: 20px
+  margin-top: 10px
+  +breakpoint($xs)
+    height: auto
+    padding-top: 60px
+    padding-bottom: 60px
+  h3
+    padding-bottom: 15px
+  .form-control
+    display: inline-block
+    width: 160px
+    margin-right: 5px
+    +breakpoint($xs)
+      width: auto
+
+
+.transport-request
+  @extend .status-check
+  height: 90px
+  margin-top: 10px
+  +breakpoint($xs)
+    height: auto
+    margin-bottom: 0
+  h3
+    padding-bottom: 0
+    +breakpoint($xs)
+      //max-width: 50%
+      line-height: 150%
+  .help
+    font-size: 9px
+    color: #9f9ea8
+    position: relative
+    display: inline-block
+    &:hover
+      color: darken(#9f9ea8, 15%)
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      top: 9px
+      left: -10px
+      height: 1px
+      width: 8px
+      background: #9f9ea8
+    +breakpoint($xs)
+      font-size: 25px
+      padding-left: 40px
+      margin-top: 30px
+      &:before
+        left: 0
+        top: 12px
+        width: 30px
+        height: 2px
+  .icon-link
+    float: right
+    +breakpoint($xs)
+      float: none
+  .icon
+    color: #d1d1d5
+    font-size: 53px
+    //float: right
+    &:hover
+      color: darken(#d1d1d5, 15%)
+    +breakpoint($xs)
+      font-size: 140px
+      float: right
+  a
+    &:hover
+      text-decoration: none
+
+  
+

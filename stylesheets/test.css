@@ -1,0 +1,6 @@
+/* line 1, ../sass/test.sass */
+body {
+  color: red;
+  transform: scale(1.5);
+  box-shadow: #0000AA;
+}

@@ -1,0 +1,439 @@
+.left-nav
+  position: absolute
+  top: 80px
+  left: 0
+  transform: translateX(-100%)
+  width: 520px
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.22)
+  z-index: 100
+  transition: transform $material-animation .4s
+  +breakpoint($md)
+    position: static
+    width: 100%
+    border-radius: 6px
+    box-shadow: none
+    margin-top: 40px
+    transform: translateX(0)
+  &.in
+    transform: translateX(0)
+  &-main
+    list-style-type: none
+    background: #e40046
+    margin: 0
+    padding: 0
+    font-size: 0
+    +breakpoint($md)
+      border-radius: 6px
+      height: 48px
+      text-align: justify
+      position: relative
+      &.no-brd
+        border-radius: 6px 6px 0 0
+    .nav-item
+      border-bottom: 2px solid #e6e6e6
+      //height: 90px
+      //padding-top: 28px
+      //padding-bottom: 26px
+      padding-left: 20px
+      padding-right: 20px
+      margin-bottom: 0
+      position: static
+
+
+      &:before
+        display: none
+      +breakpoint($md)
+        vertical-align: middle
+        display: inline-block
+        padding: 0
+        line-height: 21px
+        border: 0
+        //margin-top: -3px
+
+        +states
+          background: #90022e
+          &:nth-child(2)
+            border-radius: 6px 0 0 4px!important
+          a
+            text-decoration: none
+
+
+
+      &-link
+        color: white
+        font-size: 35px
+        font-weight: 400
+        text-transform: uppercase
+        display: block
+        line-height: 90px
+        border-bottom: 0
+
+        +breakpoint($md)
+          font-size: 12px
+          font-weight: 700
+          line-height: 48px
+          padding: 0 20px
+          &.active
+            background: #FFFFFF
+            color: #000
+            text-decoration: none
+            &:hover
+              text-shadow: none
+              text-decoration: none
+          &:hover,
+          &:active,
+          &:focus
+            text-decoration: none
+          //  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.55)
+
+
+
+      &.city
+        //display: inline-block
+        //height: 150px
+        padding-top: 44px
+        padding-bottom: 23px
+        .city-name
+          color: #FFF
+          font-size: 40px
+          font-weight: 700
+          display: block
+          //margin-top: 25px
+          margin-bottom: 0
+          padding-bottom: 10px
+        .city-change
+          color: #DDD
+          font-family: "Arial"
+          font-size: 20px
+          font-weight: 400
+          border-bottom: 1px dashed #DDD
+          text-transform: uppercase
+        &+.nav-item
+          
+          border-radius: 4px 0 0 0
+          a
+            border-radius: 4px 0 0 0
+      //margin-bottom: 30px
+      &.search
+        padding: 35px 20px 75px
+        background: none!important
+        +breakpoint($md)
+          padding: 0
+          width: 200px
+          position: relative
+          float: right
+          top: 9px
+          right: 20px
+          //top: 9px
+        .form-control
+          height: 65px
+          background-color: transparent
+          border: 3px solid white
+          border-right: 0
+          border-radius: 12px 0 0 12px
+          color: #FFF
+          font-family: "Arial"
+          font-size: 25px
+          font-style: italic
+          font-weight: 100
+          +placeholder(white)
+          +breakpoint($md)
+            height: 30px
+            background-color: #fff
+            color: #80807e
+            +placeholder(#80807e)
+            font-size: 11px
+            border: 0
+
+        .btn
+          background-color: transparent
+          color: white
+          border: 3px solid white
+          border-left: 0
+          border-radius: 0 12px 12px 0
+          padding-top: 16px
+          padding-bottom: 9px
+          padding-left: 20px
+          padding-right: 20px
+          position: relative
+          z-index: auto!important
+          height: 65px
+          +breakpoint($md)
+            padding: 5px 10px 4px
+            border: 0
+            background-color: #fff
+            height: 30px
+            //top: -4px
+
+          &:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 20px
+            width: 3px
+            height: 15px
+            background: white
+            +breakpoint($md)
+              background: #80807e
+              top: 6px
+          .icon
+            font-size: 21px
+            margin-top: 5px
+            +breakpoint($md)
+              font-size: 11px
+              color: #80807e
+  .sub-menu
+    //display: none
+
+    position: absolute
+    left: 0
+    transform: translateX(-100%)
+    top: 0
+    background: white
+    width: 520px
+    z-index: 110
+    padding-bottom: 80px
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.22)
+    transition: transform  .4s $material-animation
+    //
+    //will-change: transform
+    .link-image
+      opacity: .8
+      transform: opacity .4s $animation
+      color: #212029
+      text-decoration: none
+      border-bottom: 0
+      +states
+        opacity: 1
+        text-decoration: none!important
+      &.active
+        color: $brand-color
+
+    &.in
+      transform: translateX(0)
+      +breakpoint($md)
+        border-radius: 0 0 6px 6px
+        visibility: visible
+
+    &.collapsed
+      height: 0!important
+      margin: 0!important
+      //padding: 0!important
+      overflow: hidden
+    +breakpoint($md)
+      left: 0
+      top: 48px
+      box-shadow: none
+      border-radius: 6px 6px 6px 6px
+      width: 100%
+      padding: 0
+      visibility: hidden
+      //transition: all cubic-bezier(0.165, 0.775, 0.430, 1.005) .2s
+    .back
+      display: block
+      padding: 40px 20px 30px 20px
+      border-bottom: 4px solid #e0e0e3
+      color: #212029
+      font-size: 45px
+      font-weight: 700
+      text-transform: uppercase
+    +breakpoint($md)
+      .section
+        display: inline-block
+        vertical-align: top
+    .heading
+      margin-top: 55px
+      margin-bottom: 75px
+      color: #212029
+      font-size: 25px
+      font-weight: 400
+      text-transform: uppercase
+      +breakpoint($md)
+        font-size: 11px
+        font-weight: 700
+        margin-top: 0
+        margin-bottom: 30px
+    &-block
+      //padding-left: 20px
+      //padding-right: 20px
+      padding: 40px
+      +breakpoint($md)
+        padding: 20px
+        opacity: 0
+        transition: opacity .2s cubic-bezier(1,.01,1,.69)
+        transition-delay: .1s
+        &.in
+          opacity: 1
+      &-categoty
+
+        margin: 0
+        padding: 0
+        list-style: none
+        padding-right: 60px
+        +breakpoint($md)
+          padding-right: 10px
+        &-item
+          margin: 45px 0
+          +breakpoint($md)
+            margin: 10px 0
+            line-height: 21px
+            text-align: left
+            padding-left: 20px
+          &:before
+            display: none
+          &-link
+            color: #212029
+            font-size: 30px
+            font-weight: 700
+            border-bottom: 0
+            //transition: color .1s ease-out
+            +breakpoint($md)
+              font-size: 13px
+              color: #212029
+              //line-height: 90%
+              +states
+                text-decoration: none
+                color: $brand-color
+
+      &-img
+        width: 100%
+        min-height: 185px
+  .other-parent
+    li
+      margin-top: 0 !important
+
+
+      //Левое страничное меню
+.page-menu
+  background: #FFFFFF
+  border-radius: 11px
+  padding: 10px 0 0
+  .lvl-1
+    padding: 0
+    >.page-menu-item
+      .page-menu-item-link
+        font-size: 23px
+        text-transform: uppercase
+        padding: 5px 15px 0
+    .lvl-2
+      padding: 0
+      padding-top: 0px
+      padding-bottom: 10px
+
+      &+.lvl-2
+        border-top: 1px solid #ebebeb
+      &:first-child
+        border-top: 0
+      >.page-menu-item
+        .page-menu-item-link
+          font-size: 20px
+          text-transform: none
+      .lvl-3
+        padding: 0
+        >.page-menu-item
+          .page-menu-item-link
+            font-size: 16px
+            padding-left: 25px
+      .lvl-4
+        padding: 0
+        >.page-menu-item
+          .page-menu-item-link
+            font-size: 16px
+            padding-left: 35px
+  .helper
+    line-height: 150%
+
+
+  .active
+    >a
+      .helper
+        display: inline
+        padding-bottom: 3px
+        border-bottom: 2px solid #e40046
+  &-item
+    margin-bottom: 0
+
+    &:before
+      display: none
+    &-link
+      display: block
+      color: #212029
+      font-size: 16px
+      line-height: 21px
+      //margin-bottom: 20px
+      padding: 10px 0
+      +states
+        text-decoration: none
+        background: #ebebeb
+
+
+
+.page-menu
+  .select-country
+    display: none
+    &.in
+      display: block
+      height: auto!important
+  +breakpoint($xs)
+    &.page-menu__news
+      padding-top: 0
+      margin-top: 0
+      margin-bottom: 40px
+      padding-bottom: 0
+      overflow: hidden
+      .side-heading
+        font-size: 35px
+
+        padding: 30px 40px 30px
+        margin-top: 0
+        margin-bottom: 0
+        margin-left: -20px
+        margin-right: -20px
+        position: relative
+        .collapse-news
+
+          color: rgba(33, 32, 41, 0.83)
+          font-size: 20px
+          right: 40px
+          top: 35px
+          position: absolute
+          +states
+            text-decoration: none
+            color: $brand-color
+      .collapsed-body
+        margin-left: -20px
+        margin-right: -20px
+        padding:  20px 40px
+        display: none
+        border-top: 1px solid #6e6e6e!important
+        opacity: 0
+        transition: opacity .2s linear
+        &.in
+          display: block
+          opacity: 1
++breakpoint($xs)
+  .spec-bottom-menu
+    margin-top: 60px
+    padding-top: 15px
+    padding-bottom: 15px
+    //padding-left: 30px
+    .page-menu
+      padding-left: 30px
+    .lvl-1
+      .page-menu-item-link
+        font-size: 50px!important
+        margin: 15px 0
+    .lvl-3
+      .page-menu-item-link
+        font-size: 30px!important
+        margin: 10px 0
+        padding-left: 15px!important
+
+
+
+
+
+
+
+
+

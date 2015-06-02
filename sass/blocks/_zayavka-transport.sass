@@ -1,0 +1,408 @@
+.zayavka-transport
+  .full-width
+    margin-left: -40px
+    margin-right: -40px
+  .steps
+    margin: 0
+    margin-bottom: 30px
+    padding: 0
+    display: table
+    width: 100%
+    table-layout: fixed
+    border-collapse: separate
+    li
+      border-bottom: 1px solid #e3e3e6
+      display: table-cell
+      float: none
+      width: 1%
+      text-align: center
+      vertical-align: middle
+      height: 70px
+      font-size: 16px
+      &.active
+        color: $brand-color
+        border-bottom-color: $brand-color
+        font-weight: bold
+      &:before
+        display: none
+  form
+    .form-group
+      margin-right: 0
+      margin-left: 0
+    .label-wrapper
+      display: table
+      vertical-align: middle
+      min-height: 38px
+      span.helper-table
+        display: table-cell
+      label,
+      a
+        display: table-cell
+        vertical-align: middle
+      .change-directions
+        position: absolute
+        left: 15px
+        top: 45px
+        font-size: 9px
+        color: #333
+        line-height: 1.2
+        .icon
+          color: $brand-color
+          font-size: 16px
+          float: left
+          text-decoration: none
+        +states
+          text-decoration: none
+
+    .select-map,
+    .how-to-calc
+      color: #212029
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+      font-size: 11px
+      text-decoration: underline
+      line-height: 1.2
+      +states
+        text-decoration: none
+    .info
+      background: #d9d9d9
+      margin-left: 5px
+      +sq(11px)
+      border-radius: 50%
+      display: inline-block
+      font-size: 10px
+      color: #fff
+      text-align: center
+      vertical-align: middle
+      cursor: pointer
+      line-height: 12px
+    .font-small
+      font-size: 11px
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+
+      .helper
+        color: $brand-color
+    .wrapper
+      margin-left: -40px
+    .checkbox-inline
+      display: inline-block
+      margin-left: 0
+      padding-left: 0
+      margin-top: 10px
+      label
+        padding-left: 25px
+    .noUi-target
+      border: none
+      box-shadow: none
+      height: 1px
+      margin-top: 15px
+      background: #D3D3D3
+    .noUi-handle
+      border-radius: 50%
+      +sq(18px)
+      position: relative
+      background: transparent
+      top: -8px
+      &:after
+        display: none
+      &:before
+        display: inline-block
+        vertical-align: middle
+        +sq(8px)
+        border-radius: 50%
+        background: $brand-color
+        left: 50%
+        top: 50%
+        margin-top: -4px
+        margin-left: -4px
+    .table-variants
+
+      width: 600px
+      thead
+        color: $second-color
+        font-weight: bold
+        vertical-align: top
+        tr
+          cursor: auto
+        td
+          border: none!important
+          &:hover
+            background: none
+        small
+          color: $second-color
+          display: block
+          text-align: right
+      td
+        text-align: center
+        position: relative
+        //border: 1px solid transparent
+
+        border-top: 1px solid #ebebeb
+        //border-bottom: 1px solid #ebebeb
+        &:first-child
+          border-left: 1px solid transparent
+        &:last-child
+          border-right: 1px solid transparent
+        transition: border .4s $animation
+        &.after
+          &:after
+            content: '→'
+            display: inline-block
+            position: absolute
+            right: 0
+            top: 50%
+            margin-top: -10px
+            color: rgba(161, 159, 170, 0.35)
+      tr
+        cursor: pointer
+        &:hover
+          background: rgba(gray, .1)
+          transition: background .1s ease-out
+        &:last-child
+          td
+            border-bottom: 1px solid #ebebeb
+        &.active
+          td
+            border-top: 1px solid $second-color!important
+            border-bottom: 1px solid $second-color
+
+            &:first-child
+              border-left: 1px solid $second-color
+            &:last-child
+              border-right: 1px solid $second-color
+          .fake-radio
+            transition: background .4s $animation
+            background: $brand-color
+            border: 1px solid $brand-color
+      tr.active+tr
+        border-top: 1px
+
+
+      .icon
+        font-size: 40px
+        color: $second-color
+      .fake-radio
+        overflow: hidden
+        .icon
+          color: #fff
+          font-size: 14px
+        +sq(18px)
+        border: 1px solid #b7b7b7
+        border-radius: 50%
+        background: transparent
+        text-align: center
+        vertical-align: middle
+        padding-left: 2px
+    .footnote
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+      width: 600px
+    .input-group-addon
+      border: 0
+      background: #e9e9eb
+      cursor: pointer
+  .dop-uslugi
+    //visibility: hidden
+    overflow: hidden
+    transition: height .4s $animation
+    position: relative
+    &.collapsed
+      height: 0!important
+    .table-wrapper
+      border-right: 0
+    .overlay
+      background: rgba(white, .2)
+      position: absolute
+      z-index: 2
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+  .map-select,
+  .map-select-to
+    display: inline-block
+    text-decoration: none
+    .helper
+      color: #212029
+      text-decoration: none
+      border-bottom: 1px dotted #cbcbcb
+      display: inline-block
+    i
+      color: $brand-color
+    +states
+      .helper
+        border-bottom: 0
+  .multisection
+    .form-group
+      position: relative
+      margin: 0
+      margin-bottom: 10px
+      animation: addInput .2s
+      &.remInput
+        animation: delInput .2s
+      .add,
+      .del
+        position: absolute
+        top: 50%
+        margin-top: -9px
+        right: 10px
+        +sq(18px)
+        border: 1px solid #f93f72
+        border-radius: 50%
+        color: #f93f72
+        text-align: center
+        display: inline-block
+        line-height: 18px
+        white-space: nowrap
+        text-decoration: none
+        font-size: 18px
+  .zayavka-sucsess
+    .table
+      width: 830px
+      td
+        text-align: left
+  .additionalThings
+    margin-bottom: -168px
+    background: #fff
+    position: relative
+    z-index: 2
+    .form-group
+      margin-bottom: 5px
+  .progress
+    margin: 20px 0
+  td.day
+    cursor: pointer
+    &.disabled
+      cursor: not-allowed
+      opacity: .5
+      color: #808080
+
+.tooltipster-default
+  +card(3)
+  .tooltipster-content
+    color: #212029
+
+.deliv
+  #deliv-from,
+  #deliv-to,
+  #sender,
+  #reciver
+    height: 400px
+    position: relative
+.bootstrap-datetimepicker-widget
+  .picker-switch
+    text-align: center
+  .prev,
+  .next
+    cursor: pointer
+    &.disabled
+      cursor: not-allowed
+      opacity: 0.5
+      color: #808080
+
+.zayavka-transport
+  +breakpoint($xs)
+    .m-mt
+      margin-top: 20px
+    .from-input-wrapper
+      margin-bottom: 130px
+    form
+      .info
+        +sq(33px)
+        line-height: 33px
+        font-size: 33px
+        background: #464646
+
+
+      .label-wrapper
+        margin-bottom: 20px
+        .change-directions
+          top: 200px
+          left: 50px
+          width: 250px
+          font-size: 25px
+          padding-left: 20px
+          line-height: 1.2
+          .icon
+            margin-left: -20px
+            font-size: 45px!important
+      .noUi-target
+        height: 7px
+        margin-bottom: 30px
+      .noUi-handle
+        +sq(40px)
+        top: -17px
+        &:before
+          +sq(15px)
+          margin-top: -7px
+          margin-left: -7px
+      .checkbox
+        label
+          padding-top: 14px
+          &:after
+            top: 0
+      .font-small
+        font-size: 30px
+        line-height: 1.2
+      .how-to-calc
+        font-size: 30px
+        text-decoration: none
+        border-bottom: 2px dotted #e3e3e3
+        margin-bottom: 20px
+        display: inline-block
+      b
+        font-size: 30px
+
+      small
+        font-size: 25px
+        white-space: normal
+      .wrapper
+        margin-left: 0
+      .checkbox-inline
+        display: block
+        label
+          font-weight: normal
+          padding-left: 90px
+          padding-top: 22px
+        &+.checkbox-inline
+          margin-left: 6px
+      .parsley-min
+        //min-width: 500px
+      .table-wrapper
+        border: 0
+        white-space: nowrap
+        overflow: scroll
+        -webkit-overflow-scrolling-x: touch
+
+
+        thead
+          td
+            font-size: 30px
+      .bootstrap-datetimepicker-widget.dropdown-menu
+        width: 26em
+      .picker-switch
+        text-align: center
+
+      .map-select,
+      .map-select-to
+        font-size: 25px
+      .btn-default
+        width: 100%
+        margin-bottom: 20px
+        font-size: 35px
+      .btn
+        margin-bottom: 20px
+      .parsley-errors-list
+        display: none
+    .info
+      +sq(33px)
+      line-height: 33px
+      font-size: 33px
+      background: #464646
+    .additionalThings
+      margin-bottom: 0
+      margin-left: -15px
+
+
+
+
+
+

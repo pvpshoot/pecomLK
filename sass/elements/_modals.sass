@@ -1,0 +1,42 @@
+.modal
+  &.modal-select-country,
+  &.modal-calc-from,
+  &.modal-calc-to
+    .form-group
+      margin-top: 20px
+      margin-bottom: 0
+      margin-left: 0
+      margin-right: 0
+    .fbp-cc-popular-list
+      padding: 0
+      margin: 0
+      margin-top: 20px
+      li
+        display: inline-block
+        width: 282px
+        font-size: 0
+        a
+          font-size: 18px
+          color: #1b1a24
+          border-bottom: 2px solid #ffffff
+          text-decoration: none
+          transition: border-color .4s ease-out
+          +states
+            border-bottom: 2px solid $brand-color
+        &:before
+          display: none
+  p
+    &:first-child
+      margin-top: 0
+  .label-wrapper
+    display: table
+    vertical-align: middle
+    min-height: 40px
+    label
+      display: table-cell
+      vertical-align: middle
+  +breakpoint($xs)
+    label
+      font-size: 30px
+      line-height: 1.5
+

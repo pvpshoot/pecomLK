@@ -1,0 +1,265 @@
+.calc
+  @extend .zayavka-transport
+  .full-width
+    margin: 0 -40px 20px
+    padding: 0 40px 20px
+    border-bottom: 1px solid #e3e3e6
+  .region
+    display: table-cell
+    color: #787878
+    vertical-align: middle
+    font-family: "Tahoma", Helvetica, Arial, sans-serif
+  .tooltips
+    border-bottom: 1px dashed #e3e3e3
+    cursor: pointer
+  .radio-inline
+    padding-left: 0
+    .radio
+      margin-right: 20px
+      display: inline-block
+  .table-wrapper
+    border-right: none
+  .table_noJs
+    @extend .table
+    width: 100%
+    margin-bottom: 30px
+    thead
+      td
+        //color: $second-color
+        font-weight: 700!important
+        background: #fff
+        text-align: left
+
+    td
+      text-align: center
+      vertical-align: middle
+      border-bottom: 1px solid #e3e3e3
+      animation: addInput
+      &+td
+        text-align: center
+      &:last-child
+        text-align: left
+
+
+    .form-control
+      width: 80px
+      height: 25px
+      color: $second-color
+      padding-top: 0
+      padding-bottom: 0
+    .form-group,
+    .checkbox
+      display: inline-block
+      vertical-align: middle
+      margin: 0
+      label
+        margin-top: 10px
+    .rower
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+      font-size: 13px
+      text-decoration: none
+      //padding-left: 30px
+      display: inline-block
+      color: #212029
+      vertical-align: middle
+      &:before
+        content: ''
+        text-align: center
+        display: inline-block
+        +sq(34px)
+        line-height: 34px
+        border: 1px solid #b7b7b7
+        border-radius: 2px
+        margin-right: 10px
+        color: $brand-color
+        +breakpoint($md)
+          +sq(17px)
+          line-height: 17px
+
+      &.add:before
+        content: '+'
+      &.del:before
+        content: '\2212'
+  .additional
+    .checkbox,
+    .hider
+      display: inline-block
+    .form-group
+      display: inline-block
+      margin: 0
+      width: 80px
+      margin-bottom: -10px
+      .form-control
+        height: 25px
+        width: 80px
+        padding-top: 0
+        padding-bottom: 0
+        color: $second-color
+  .results
+    margin-top: 40px
+    margin-bottom: 40px
+    border-bottom: 1px solid #e3e3e3
+    h2
+      font-size: 30px
+      text-transform: none
+      background: $second-color
+      color: #fff
+      text-align: center
+      margin-left: -40px
+      margin-right: -40px
+    small
+      font-family: 'Tahoma', "Helvetica Neue", Helvetica, sans-serif
+    .table-wrapper
+      border-right: 0
+    .table_noJs
+      td
+        text-align: left
+
+        sup
+          font-weight: normal
+          display: block
+          margin-top: 5px
+        &:last-child
+          text-align: right
+    .total
+      text-align: right
+      font-weight: bold
+      font-family: "Tahoma", Helvetica, Arial, sans-serif
+      .num
+        width: 100px
+        display: inline-block
+      &-spec
+        font-weight: normal
+        color: $brand-color
+    .brl
+      border-left: 1px solid #e3e3e3
+    .helper
+      font-size: 12px
+      color: #8b8b8b
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+      padding-bottom: 40px
+
+  +breakpoint($xs)
+    .region
+      font-size: 30px
+    .checkbox
+      label
+        font-weight: normal
+        line-height: 1.5
+        padding-top: 0!important
+        padding-bottom: 0!important
+        font-size: 30px
+        &:after
+          top: -10px
+          left: 0
+    form
+      .info
+        +sq(33px)
+        line-height: 37px
+        font-size: 26px
+        background: #464646
+    .radio-inline .radio
+      display: block
+    .table-wrapper
+      border: 0
+      white-space: nowrap
+      overflow: scroll
+      -webkit-overflow-scrolling-x: touch
+    .table_noJs
+      thead
+        td
+          text-align: center
+      .form-control
+        height: 50px
+      .checkbox
+        label
+          padding: 0
+          margin-top: 0
+          &:after,
+          &:before
+            +sq(50px)
+      .rower
+        font-size: 26px
+        white-space: nowrap
+    .additional
+      margin-bottom: 30px
+      span
+        font-size: 30px
+        vertical-align: middle
+        &+.form-group
+          .form-control
+          .form-control
+            margin-left: 10px
+      .hider
+        margin-left: 100px
+        span
+          display: inline-block
+          margin-bottom: 20px
+      .form-group
+        margin: 0 20px 0 0
+        width: 160px
+        vertical-align: middle
+        .form-control
+          height: 80px
+          width: 160px
+          text-align: center
+          vertical-align: middle
+    .desc
+      display: inline-block
+      text-align: center
+      margin: 20px auto
+      width: 100%
+      margin-top: 30px
+      margin-bottom: 40px
+      font-size: 33px
+      line-height: 1.2
+    .results
+      border-bottom: 0
+      h2
+        font-size: 40px
+        padding: 20px 0
+      h4
+        margin-top: 0
+        margin-bottom: 0
+      small
+        font-size: 30px
+        display: block
+        margin-bottom: 20px
+        line-height: 1.5
+      td
+        line-height: 1.5
+        label
+          margin-bottom: 0
+          padding-left: 80px!important
+      .total
+        text-align: left
+        font-size: 27px
+        display: table
+        width: 100%
+        margin-bottom: 20px
+        .name,
+        .num
+          display: table-cell
+        .num
+          text-align: right
+      .brl
+        border: 0
+  .posr
+    position: relative
+  .js_weight-group,
+  .js_length-group
+    position: absolute
+    right: -3px
+    top: 50%
+    margin-top: -10px
+    span
+      background: #f52323
+  .errors
+    margin-top: 20px
+
+
+
+
+
+
+
