@@ -1,0 +1,17 @@
+{
+    "name": "wholly",
+    "version": "2.0.0",
+    "main": "dist/wholly.min.js",
+    "license": "BSD-3-Clause",
+    "dependencies": {
+        "jquery": ">=1"
+    },
+    "description": "jQuery plugin used to select the entire table row and column in response to mouseenter and mouseleave events. Wholly supports table layouts that utilize colspan and rowspan.",
+    "keywords": [
+        "table",
+        "column",
+        "highlight",
+        "hover",
+        "event"
+    ]
+}

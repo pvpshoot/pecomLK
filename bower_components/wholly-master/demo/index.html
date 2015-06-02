@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="../src/wholly.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./static/css/demo.css">
+
+    <script>
+    $(function () {
+        var table = $('table');
+
+        table.find('td').each(function (i) {
+            $(this).text(i + 1);
+        });
+
+        table.wholly({
+            highlightHorizontal: 'wholly-highlight-horizontal',
+            highlightVertical: 'wholly-highlight-vertical'
+        });
+
+        table.on('wholly.mouseenter', function (e, affectedAxes) {
+            console.log('wholly.mouseenter', affectedAxes);
+        });
+
+        table.on('wholly.mouseleave', function (e, affectedAxes) {
+            console.log('wholly.mouseleave', affectedAxes);
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="main">
+        <div id="demo">
+            <table class="example-basic">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="example-horizontal">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="example-vertical">
+                <tbody>
+                    <tr>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="3"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="example-full">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4"></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>View the <code>console.log</code> for the event log.</p>
+
+        <p class="src">Demo of <a href="https://github.com/gajus/wholly">https://github.com/gajus/wholly</a></p>
+    </div>
+</body>
+</html>

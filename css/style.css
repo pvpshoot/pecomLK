@@ -66,6 +66,18 @@
     color: #1c1a25;
     font-weight: 700;
     border: 2px solid #cccccc; }
+  .btn-img-link {
+    font-size: 14px;
+    color: #1b1a24;
+    font-weight: 700;
+    padding: 0; }
+    .btn-img-link i {
+      font-size: 25px;
+      color: #252069;
+      vertical-align: middle;
+      margin-bottom: -5px;
+      display: inline-block;
+      padding-right: 10px; }
 
 .social {
   display: inline-block;
@@ -346,6 +358,12 @@ a.primary-c {
 
 .icon-calc:before {
   content: "d"; }
+
+.icon-list:before {
+  content: "e"; }
+
+.icon-file-add:before {
+  content: "f"; }
 
 @font-face {
   font-family: "ElektraLightPro";
@@ -1955,6 +1973,10 @@ a.no-icon {
   color: #212029;
   font-style: 11px;
   margin-top: 0; }
+
+input[type='file'] {
+  position: absolute;
+  left: -9999px; }
 
 .footer {
   margin-top: 60px;
