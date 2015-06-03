@@ -365,6 +365,24 @@ a.primary-c {
 .icon-file-add:before {
   content: "f"; }
 
+.icon-cross:before {
+  content: "g"; }
+
+.icon-blank:before {
+  content: "h"; }
+
+.icon-man:before {
+  content: "i"; }
+
+.icon-pen:before {
+  content: "j"; }
+
+.icon-reload:before {
+  content: "k"; }
+
+.icon-x-point:before {
+  content: "l"; }
+
 @font-face {
   font-family: "ElektraLightPro";
   src: url("/fonts/new/elektra-bold.eot");
@@ -2162,6 +2180,129 @@ input[type='file'] {
     color: #212029;
     text-transform: uppercase; }
 
+.content-menu {
+  margin: 0;
+  padding: 0;
+  font-size: 0; }
+  .content-menu li {
+    height: 70px;
+    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .content-menu li:before {
+      display: none; }
+    .content-menu li.select-cnt {
+      padding: 0;
+      padding-top: 15px;
+      margin: 0;
+      float: right;
+      width: 200px; }
+      .content-menu li.select-cnt a,
+      .content-menu li.select-cnt select {
+        font-size: 14px; }
+    .content-menu li a {
+      line-height: 70px;
+      color: #212029;
+      text-decoration: none !important;
+      transition: opacity 0.4s ease;
+      font-size: 14px; }
+      .content-menu li a:hover, .content-menu li a:focus, .content-menu li a:active, .content-menu li a.active {
+        opacity: 0.8; }
+      .content-menu li a i {
+        color: #252069;
+        padding-right: 20px;
+        font-size: 25px;
+        vertical-align: sub; }
+
+.send-content {
+  display: table;
+  border-bottom: 1px solid #e3e3e6;
+  border-top: 1px solid #e3e3e6;
+  width: 1140px;
+  margin-left: -40px;
+  margin-right: -40px; }
+  .send-content form,
+  .send-content .legend,
+  .send-content .additionl-th {
+    display: table-cell;
+    padding-top: 35px;
+    padding-bottom: 45px; }
+  .send-content form {
+    width: 770px;
+    padding-left: 20px;
+    padding-right: 25px;
+    border-right: 1px solid #e3e3e6; }
+  .send-content .date-pick {
+    position: relative;
+    margin-bottom: 55px; }
+    .send-content .date-pick .fck-from {
+      position: absolute;
+      left: -25px;
+      top: 10px; }
+    .send-content .date-pick .fck-to {
+      float: right;
+      padding-top: 10px;
+      padding-right: 10px; }
+    .send-content .date-pick .form-control {
+      width: 115px;
+      display: inline-block;
+      float: left; }
+      .send-content .date-pick .form-control + .form-control {
+        float: right; }
+  .send-content .item p, .send-content .item blockquote {
+    color: #252069;
+    padding-left: 35px;
+    margin-bottom: -15px;
+    margin-top: 0; }
+  .send-content .legend {
+    padding-left: 25px; }
+    .send-content .legend h5 {
+      color: #1b1a24;
+      font-size: 24px;
+      margin-bottom: 30px; }
+    .send-content .legend ul {
+      padding: 0;
+      margin: 0; }
+      .send-content .legend ul li {
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+        height: 40px;
+        line-height: 1.2;
+        font-size: 14px;
+        color: #43434a; }
+        .send-content .legend ul li:before {
+          display: none; }
+        .send-content .legend ul li .mark {
+          display: block;
+          float: left;
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
+          margin-right: 10px; }
+          .send-content .legend ul li .mark-accsepted {
+            background: #ffcccc; }
+          .send-content .legend ul li .mark-toDelivery {
+            background: #e5d4e2; }
+          .send-content .legend ul li .mark-noComplect {
+            background: #e8d7d7; }
+          .send-content .legend ul li .mark-returnToSender {
+            background: #e6e3e4; }
+          .send-content .legend ul li .mark-delivered {
+            background: #ccdcec; }
+          .send-content .legend ul li .mark-onWay {
+            background: #fff6cd; }
+          .send-content .legend ul li .mark-resycle {
+            background: #ffc89e; }
+          .send-content .legend ul li .mark-arived {
+            background: #cceddc; }
+          .send-content .legend ul li .mark-given {
+            background: #d8dce6; }
+
+.send-result {
+  padding-top: 20px; }
+
 body {
   -webkit-font-smoothing: antialiased;
   line-height: 150%;
@@ -2329,3 +2470,6 @@ html {
     font-size: 20px;
     width: 100%;
     margin-top: 40px; }
+
+.content .full-width {
+  margin: -20px -40px 0; }

@@ -45,7 +45,6 @@
                       <div class="col-md-5">
                           <div class="checkbox">
                               <div class="form-group">
-                                  <!-- TODO: сделать js чекбоксов   -->
                                   <label><input type="checkbox" name="ur-face">Отправитель является юр.лицом или
                                       ИП</label>
 

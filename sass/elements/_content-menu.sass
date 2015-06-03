@@ -1,0 +1,35 @@
+.content-menu
+  margin: 0
+  padding: 0
+  font-size: 0
+  //border-bottom: 1px solid #e3e3e6
+  li
+    height: 70px
+    display: inline-block
+    margin-bottom: 0
+    padding-left: 20px
+    padding-right: 20px
+    &:before
+      display: none
+    &.select-cnt
+      padding: 0
+      padding-top: 15px
+      margin: 0
+      float: right
+      width: 200px
+      a,
+      select
+        font-size: 14px
+    a
+      line-height: 70px
+      color: #212029
+      text-decoration: none !important
+      transition: opacity .4s ease
+      font-size: 14px
+      +states
+        opacity: .8
+      i
+        color: #252069
+        padding-right: 20px
+        font-size: 25px
+        vertical-align: sub

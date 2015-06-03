@@ -1,0 +1,73 @@
+.send-content
+  display: table
+  border-bottom: 1px solid #e3e3e6
+  border-top: 1px solid #e3e3e6
+  width: 1140px
+  margin-left: -40px
+  margin-right: -40px
+  form,
+  .legend,
+  .additionl-th
+    display: table-cell
+    padding-top: 35px
+    padding-bottom: 45px
+  form
+    width: 770px
+    padding-left: 20px
+    padding-right: 25px
+    border-right: 1px solid #e3e3e6
+  .additionl-th
+
+  .date-pick
+    position: relative
+    margin-bottom: 55px
+    .fck-from
+      position: absolute
+      left: -25px
+      top: 10px
+    .fck-to
+      float: right
+      padding-top: 10px
+      padding-right: 10px
+    .form-control
+      width: 115px
+      display: inline-block
+      float: left
+      &+.form-control
+        float: right
+  .item
+    p
+      color: #252069
+      padding-left: 35px
+      margin-bottom: -15px
+      margin-top: 0
+  .legend
+    padding-left: 25px
+    h5
+      color: #1b1a24
+      font-size: 24px
+      margin-bottom: 30px
+
+    ul
+      padding: 0
+      margin: 0
+      li
+        display: inline-block
+        width: 48%
+        vertical-align: top
+        height: 40px
+        line-height: 1.2
+        font-size: 14px
+        color: #43434a
+        &:before
+          display: none
+        .mark
+          display: block
+          float: left
+          border-radius: 50%
+          +sq(18px)
+          margin-right: 10px
+          @each $name, $color in $mark-colors
+            &-#{$name}
+              background: $color
+

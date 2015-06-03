@@ -169,6 +169,7 @@
 
 
 <script src="/bower_components/chosen_v1.4.1/chosen.jquery.min.js"></script>
+<!-- <script src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script> -->
 <script src="/js/app.js"></script>
 
 </body>

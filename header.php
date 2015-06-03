@@ -15,6 +15,7 @@
 <link href="/bower_components/tooltipster/css/tooltipster.css" rel="stylesheet">
 <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
 <link href="/css/style.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
 
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
